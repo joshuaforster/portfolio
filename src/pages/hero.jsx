@@ -27,12 +27,12 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="flex justify-center gap-5">
-                    <button className="bg-customRed-100 text-white rounded-full px-6 py-2 text-lg font-medium hover:bg-customRed-200 transition-colors duration-200 ease-in-out">
+                    <a href='#contact' className="bg-customRed-100 text-white rounded-full px-6 py-2 text-lg font-medium hover:bg-customRed-200 transition-colors duration-200 ease-in-out">
                         Contact
-                    </button>
-                    <button className="bg-green-900 text-white rounded-full px-6 py-2 text-lg font-medium hover:bg-green-800 transition-colors duration-200 ease-in-out">
+                    </a>
+                    <a href='#portfolio' className="bg-green-900 text-white rounded-full px-6 py-2 text-lg font-medium hover:bg-green-800 transition-colors duration-200 ease-in-out">
                         See Projects
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
