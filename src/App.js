@@ -17,6 +17,7 @@ function App() {
           <Route path='/blog' element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} /> {/* New route for individual blog posts */}
           <Route path="/portfolio/:id" element={<PortfolioDetail/>} />
+          <Route path='*'element={<h1>404</h1>} />
         </Route>
       </Routes>
     </BrowserRouter>
