@@ -9,10 +9,10 @@ export default function Header() {
                     <img src="/joshLogo.png" alt="Josh's Logo" className="h-10"/>
                 </Link>
                 <nav className="flex space-x-4">
-                    <Link href="#hero" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
+                    <Link href="/" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
                         Home
                     </Link>
-                
+
                     <Link to="/blog" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
                         Blog
                     </Link>
