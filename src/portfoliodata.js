@@ -10,7 +10,7 @@ export const projects = [
   {
     id: 2,
     name: 'Nutracheck',
-    image: '/nutracheck.png',
+    image: '/supplements.png',
     title: 'Nutracheck',
     description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     buttonText: 'See Project'
