@@ -56,7 +56,7 @@ export default function About() {
             <div><img src="/firebase.png" alt="" className="h-12 w-auto"/></div>
           </div>
           <div className="bg-gray-50 shadow-lg rounded-md flex justify-center items-center p-4 m-2">
-            <div><img src="/figma.png" alt="" className="h-12 w-auto"/></div>
+            <div><img src="/react.png" alt="" className="h-12 w-auto"/></div>
           </div>
         </div>
    

@@ -1,5 +1,13 @@
 import React from 'react';
 
+// Define the contact options as an array of objects
+const contactOptions = [
+  { name: 'Email', icon: 'email-icon-path', link: '#' }, // You can add icon paths and specific links
+  { name: 'LinkedIn', icon: 'linkedin-icon-path', link: '#' },
+  { name: 'GitHub', icon: 'github-icon-path', link: '#' },
+  { name: 'CV', icon: 'cv-icon-path', link: '#' },
+];
+
 export default function Hero() {
     return (
         <section className="relative bg-[#F3F3F4] bg-no-repeat bg-cover bg-center w-full min-h-[500px] md:h-[700px]" style={{ backgroundImage: "url('/Mask group.png')" }}>
@@ -13,18 +21,12 @@ export default function Hero() {
                 <div className="border-t-2 border-green-500 w-24 mx-auto my-3"></div>
                 <p className="text-md md:text-lg text-gray-600 mb-5">Crafting Responsive and Engaging Websites with a Blend of Modern Design and Cutting-Edge Frontend Technologies</p>
                 <div className="flex justify-center items-center gap-4 mb-5">
-                    <div className="bg-white shadow-lg rounded-full p-3 inline-flex items-center justify-center">
-                        Email
-                    </div>
-                    <div className="bg-white shadow-lg rounded-full p-3 inline-flex items-center justify-center">
-                        LinkedIn
-                    </div>
-                    <div className="bg-white shadow-lg rounded-full p-3 inline-flex items-center justify-center">
-                        GitHub
-                    </div>
-                    <div className="bg-white shadow-lg rounded-full p-3 inline-flex items-center justify-center">
-                        CV
-                    </div>
+                    {/* Mapping through the contactOptions to display each option */}
+                    {contactOptions.map((option) => (
+                        <div key={option.name} className="bg-white shadow-lg rounded-full p-3 inline-flex items-center justify-center">
+                            {option.name}
+                        </div>
+                    ))}
                 </div>
                 <div className="flex justify-center gap-5">
                     <a href='#contact' className="bg-customRed-100 text-white rounded-full px-6 py-2 text-lg font-medium hover:bg-customRed-200 transition-colors duration-200 ease-in-out">
@@ -38,4 +40,5 @@ export default function Hero() {
         </section>
     );
 }
+
 
