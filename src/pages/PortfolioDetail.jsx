@@ -17,11 +17,17 @@ export default function PortfolioDetail() {
     return <p>Loading...</p>;
   }
 
+  const productDescription = project.description.split('\n').map((line, index, arr) =>(
+    <React.Fragment key={index}>
+      {line} {index < arr.length - 1? <br /> : ''}
+    </React.Fragment>
+  ))
+
   return (
     <div className="flex justify-center text-center pt-8 pb-16 bg-gray-100 min-h-screen">
       <div className='w-full max-w-4xl mx-auto px-4 sm:px-12 lg:px-24'>
         <h1 className="text-4xl font-bold text-center my-8">{project.title}</h1>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">{project.description}</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-8">{productDescription}</p>
         <div className="flex justify-center my-4">
           <img 
             src={project.image} 
