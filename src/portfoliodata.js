@@ -20,7 +20,7 @@ export const projects = [
     shortDescription: `A React-built recruitment platform for the food industry, connecting chefs, nutritionists, and other food professionals with their ideal jobs. Features include Firebase integration for data handling and secure logins, wrapped in a user-friendly design.`,
   },
   {
-    id: 3,
+    id:3 ,
     name: 'Sampson N CO',
     image: '/sampsonnco.png',
     title: 'Sampson N CO',

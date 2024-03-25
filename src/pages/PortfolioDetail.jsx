@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../portfoliodata";
 
 export default function PortfolioDetail() {
   const params = useParams();
-  const [project, setProject] = useState(null);
+  const [project, setProject] = React.useState(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const projectID = Number(params.id);
     const foundProject = projects.find((project) => project.id === projectID);
     setProject(foundProject);
+    console.log(params)
   }, [params.id]);
 
 
