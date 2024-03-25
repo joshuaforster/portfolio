@@ -7,9 +7,16 @@ export default function PortfolioDetail() {
   const [project, setProject] = useState(null);
 
   useEffect(() => {
-    const foundProject = projects.find((project) => project.id === params.id);
+    const projectID = Number(params.id);
+    const foundProject = projects.find((project) => project.id === projectID);
     setProject(foundProject);
   }, [params.id]);
+
+
+  // Handling the case when the project is not found
+  if (!project) {
+    return <p>Loading...</p>;
+  }
 
   const productDescription = project.description.split('\n').map((line, index, arr) =>(
     <React.Fragment key={index}>
