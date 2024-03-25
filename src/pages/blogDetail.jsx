@@ -34,7 +34,7 @@ export default function BlogDetail() {
             }
         })
         .catch(console.error);
-}, [params.id]);
+        }, [params.id]);
 
     const Bold = ({ children }) => <span className="font-bold">{children}</span>;
     const Text = ({ children }) => <p className="mb-4">{children}</p>;

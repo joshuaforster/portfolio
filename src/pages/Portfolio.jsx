@@ -4,7 +4,7 @@ import { projects } from "../portfoliodata";
 
 export default function Portfolio() {
     const portfolio = projects.map((project) => (
-        <div key={project.id} className="my-8 lg:flex  overflow-hidden">
+        <div key={project.id} className="my-8 lg:flex overflow-hidden">
             <Link to={`/portfolio/${project.id}`} aria-label={`View details for the ${project.title} project`} className="lg:flex w-full items-center text-center lg:text-left">
                 <div className="lg:w-1/2">
                     <img src={project.image} alt={project.name} className="w-full h-auto lg:w-4/5 mx-auto rounded-lg m-4 shadow-2xl lg:rounded-none lg:rounded-l-lg" />
