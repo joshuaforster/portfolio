@@ -63,6 +63,9 @@ export default function BlogDetail() {
 
     if (!post) return <div>Loading...</div>; // Handle loading state
 
+   
+    console.log(post)
+
     return (
         <div className='flex gap-24 mx-auto px-4 sm:px-12 lg:px-24 max-w-screen-2xl'>
             {/* Main Content */}
@@ -84,8 +87,8 @@ export default function BlogDetail() {
                 <div className="py-4">
                     <h2 className="text-xl font-semibold mb-4">Navigation</h2>
                     <ul className="space-y-2">
-                        <li><Link to="/blog/previous-post" className="text-blue-500 hover:text-blue-700">Previous Post</Link></li>
-                        <li><Link to="/blog/next-post" className="text-blue-500 hover:text-blue-700">Next Post</Link></li>
+                        <li><Link to={`/blog/${(post.id)-1}`} className="text-blue-500 hover:text-blue-700">Previous Post</Link></li>
+                        <li><Link to={`/blog/${(post.id)+1}`} className="text-blue-500 hover:text-blue-700">Next Post</Link></li>
                         {/* Additional sidebar links as needed */}
                     </ul>
                 </div>

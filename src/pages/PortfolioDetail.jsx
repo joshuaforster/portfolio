@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../portfoliodata";
+import { Link } from "react-router-dom";
 
 export default function PortfolioDetail() {
   const params = useParams();
@@ -37,6 +38,7 @@ export default function PortfolioDetail() {
             className="max-w-full h-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105" 
           />
         </div>
+        <Link to={project.url}>Live Link</Link>
         {/* Additional project details could go here */}
       </div>
     </div>

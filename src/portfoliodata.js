@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: 1,
+    url: 'https://shiny-zuccutto-9086ee.netlify.app/',
     name: 'FoodCruitment',
     image: '/recruitment.png',
     title: 'FoodCruitment',
@@ -12,6 +13,7 @@ export const projects = [
   ,
   {
     id: 2,
+    url: 'https://supplementdata.netlify.app',
     name: 'Nutracheck',
     image: '/supplements.png',
     title: 'Nutracheck',
@@ -21,6 +23,7 @@ export const projects = [
   },
   {
     id:3 ,
+    url:'https://www.sampsonnco.com',
     name: 'Sampson N CO',
     image: '/sampsonnco.png',
     title: 'Sampson N CO',
