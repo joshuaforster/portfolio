@@ -11,7 +11,7 @@ export default function PortfolioDetail() {
     const foundProject = projects.find((project) => project.id === projectID);
     setProject(foundProject);
     console.log(params)
-  }, [params.id]);
+  }, [params]);
 
 
   // Handling the case when the project is not found
