@@ -1,7 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { projects } from "../portfoliodata";
-import { Link } from "react-router-dom";
 
 export default function PortfolioDetail() {
   const params = useParams();
