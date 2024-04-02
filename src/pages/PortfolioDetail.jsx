@@ -37,7 +37,13 @@ export default function PortfolioDetail() {
             className="max-w-full h-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105" 
           />
         </div>
-        <Link to={project.url}>Live Link</Link>
+        <Link
+          to={project.url}
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-150 ease-in-out"
+        >
+          Live Link
+        </Link>
+
         {/* Additional project details could go here */}
       </div>
     </div>

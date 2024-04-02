@@ -10,9 +10,11 @@ export default function BlogPage() {
         const accessToken = 'aufNUZnRvfQJE6MPybHWO52BrtvsxhJJcjypyFO7WkA';
         const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&include=1`;
 
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
+        // Correctly defined async function inside useEffect
+        async function fetchBlogPage() {
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
                 const mappedItems = data.items.map(item => {
                     const featuredImageId = item.fields.featuredImage?.sys.id;
                     const asset = data.includes.Asset.find(asset => asset.sys.id === featuredImageId);
@@ -27,11 +29,14 @@ export default function BlogPage() {
                 });
 
                 setBlogPosts(mappedItems);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error("Failed to fetch blog posts:", error);
-            });
-    }, []);
+            }
+        }
+
+        // Call the function
+        fetchBlogPage();
+    }, []); // Added empty dependency array
 
     // Preparing blog post elements for rendering
     const blogPostElements = blogPosts.map(post => (

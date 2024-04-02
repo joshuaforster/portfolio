@@ -12,29 +12,37 @@ export default function BlogDetail() {
         const spaceId = 'w9xo39obj3rg';
         const environmentId = 'master';
         const accessToken = 'aufNUZnRvfQJE6MPybHWO52BrtvsxhJJcjypyFO7WkA';
-        const entryId = params.id; // Get the entry ID from the URL parameters
+        const entryId = params.id; // Assuming 'params' is defined earlier in your component
         const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries/${entryId}?access_token=${accessToken}&include=1`;
-            
-        fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            setPost(data);
-
-            // Check if 'includes' and 'includes.Asset' exist before attempting to access them
-            if (data.includes && data.includes.Asset) {
-                const mainImageId = data.fields.featuredImage.sys.id;
-                const mainImageAsset = data.includes.Asset.find(asset => asset.sys.id === mainImageId);
-                if (mainImageAsset) {
-                    const imageUrl = `https:${mainImageAsset.fields.file.url}`;
-                    setMainImage(imageUrl);
+    
+        // Define the async function within the useEffect
+        async function fetchBlogPosts() {
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                setPost(data); // Assuming 'setPost' updates your state with the fetched post
+    
+                // Processing to find and set the main image
+                if (data.includes && data.includes.Asset) {
+                    const mainImageId = data.fields.featuredImage.sys.id;
+                    const mainImageAsset = data.includes.Asset.find(asset => asset.sys.id === mainImageId);
+                    if (mainImageAsset) {
+                        const imageUrl = `https:${mainImageAsset.fields.file.url}`;
+                        setMainImage(imageUrl); // Assuming 'setMainImage' updates your state with the main image URL
+                    }
+                } else {
+                    console.error('No included assets found in the response.');
                 }
-            } else {
-                // Handle the case where 'includes' or 'includes.Asset' does not exist
-                console.error('No included assets found in the response.');
+            } catch (error) {
+                console.error('Error fetching blog posts:', error);
             }
-        })
-        .catch(console.error);
-        }, [params.id]);
+        }
+    
+        // Call the async function
+        fetchBlogPosts();
+    }, [params.id]); // Assuming 'params.id' is a dependency of this effect
+    
+         
 
     const Bold = ({ children }) => <span className="font-bold">{children}</span>;
     const Text = ({ children }) => <p className="mb-4">{children}</p>;
