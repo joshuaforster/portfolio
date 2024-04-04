@@ -1,34 +1,32 @@
 export const projects = [
   {
     id: 1,
-    url: 'https://foodcruitment.netlify.app/',
-    name: 'Foodcruitment',
-    image: '/foodcruitment.png',
-    title: 'FoodCruitment',
-    description: `FoodCruitment stands as a bespoke recruitment platform designed specifically for the vibrant world of food industry careers. \n \n It bridges the gap between skilled individuals and their next career opportunities in various roles including chefs, food developers, nutritionists, dietitians, and food hygiene specialists. \nOur platform is intricately designed using React, showcasing a seamless user experience with responsive design elements that adapt to any device. Navigation is powered by React Router, ensuring a smooth and intuitive journey through the site. The backbone of FoodCruitment is Firebase, which provides a robust infrastructure for data storage, user authentication, and API services for real-time data updates. \nThis project was born from my deep interest in the food sector and a desire to challenge myself by developing a comprehensive recruitment site. By combining my passion for food with my skills in front-end development, I've aimed to create a platform that not only serves industry professionals but also enriches the food community as a whole.`,
-    buttonText: 'See Project',
-    shortDescription: `A React-built recruitment platform for the food industry, connecting chefs, nutritionists, and other food professionals with their ideal jobs. Features include Firebase integration for data handling and secure logins, wrapped in a user-friendly design.`,
-  }
-  
-  ,
-  {
-    id: 2,
     url: 'https://sweeteners.netlify.app',
     name: 'Sweeteners',
     image: '/sweeteners.png',
     title: 'Sweeteners',
-    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Dive deep into the world of sweeteners with an app designed to demystify every sugar substitute under the sun.\n \nFrom natural options like Stevia to synthetic creations like Aspartame, Sweeteners offers unbiased, comprehensive information on health benefits, uses, and controversies surrounding each sweetener.\n \nPerfect for nutritionists, health-conscious cooks, and anyone curious about their food’s sweet side.',
     buttonText: 'See Project',
-    shortDescription: `A React-built recruitment platform for the food industry, connecting chefs, nutritionists, and other food professionals with their ideal jobs. Features include Firebase integration for data handling and secure logins, wrapped in a user-friendly design.`,
+    shortDescription: `Explore an unbiased perspective on sweeteners.\n \nThis app provides detailed insights into various sugar alternatives, their health implications, and culinary uses, all wrapped up in a user-friendly interface.`,
   },
   {
-    id:3 ,
-    url:'https://www.sampsonnco.com',
+    id: 2,
+    url: 'https://foodcruitment.netlify.app/',
+    name: 'Foodcruitment',
+    image: '/foodcruitment.png',
+    title: 'FoodCruitment',
+    description: `Connect with the heart of the food industry through FoodCruitment.\n \nWhether you're a chef, food developer, nutritionist, or hygiene specialist, this platform is your gateway to the next big opportunity.\n \nDesigned with React for a seamless user experience, it features responsive design, React Router for effortless navigation, and Firebase for robust data management and secure authentication.\n \nDive into a world where your culinary skills meet their match in career opportunities.`,
+    buttonText: 'See Project',
+    shortDescription: `A dedicated recruitment platform for the vibrant food industry.\nOffering a direct line to career opportunities for chefs, nutritionists, and more with state-of-the-art web technologies.`,
+  },
+  {
+    id: 3,
+    url: 'https://www.sampsonnco.com',
     name: 'Sampson N CO',
     image: '/sampsonnco.png',
     title: 'Sampson N CO',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    description: 'Step into elegance with Sampson N CO, a premier destination for luxury bathroom designs and accessories.\n \nOur site offers an immersive experience into high-end bathroom renovations, showcasing a curated collection of fixtures, fittings, and design inspirations.\n \nDesigned for those who cherish sophistication in their sanctuary, Sampson N CO provides everything needed for a breathtaking bathroom makeover.',
     buttonText: 'See Project',
-    shortDescription: `A React-built recruitment platform for the food industry, connecting chefs, nutritionists, and other food professionals with their ideal jobs. Features include Firebase integration for data handling and secure logins, wrapped in a user-friendly design.`,
+    shortDescription: `A luxury bathroom design and accessories website, offering an immersive experience into high-end renovations and sophisticated living spaces.`,
   }
 ];

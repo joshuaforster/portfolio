@@ -18,7 +18,7 @@ export default function Portfolio() {
                             </React.Fragment>
                         ))}
                     </p>
-                    <i className="text-customRed-100 font-semibold">{project.buttonText}</i>
+                    <i className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-150 ease-in-out">{project.buttonText}</i>
                 </div>
             </Link>
         </div>
