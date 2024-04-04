@@ -5,6 +5,7 @@ import PortfolioDetail from "./pages/PortfolioDetail";
 import Layout from "./components/layout"
 import BlogPage from "./pages/blog";
 import BlogDetail from "./pages/blogDetail";
+import NothingHere from "./pages/nothingHere";
 import './App.css'
 
 
@@ -17,7 +18,7 @@ function App() {
           <Route path='/blog' element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} /> {/* New route for individual blog posts */}
           <Route path="/portfolio/:id" element={<PortfolioDetail/>} />
-          <Route path='*'element={<h1>404</h1>} />
+          <Route path='*'element={<NothingHere/>} />
         </Route>
       </Routes>
     </BrowserRouter>

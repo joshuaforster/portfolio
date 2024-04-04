@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Define the contact options as an array of objects
 const contactOptions = [
-  { name: 'Email', icon: 'email-icon-path', link: '#' }, // You can add icon paths and specific links
-  { name: 'LinkedIn', icon: 'linkedin-icon-path', link: '#' },
-  { name: 'GitHub', icon: 'github-icon-path', link: '#' },
-  { name: 'CV', icon: 'cv-icon-path', link: '#' },
+  { name: 'Email', icon: 'email-icon-path', link: 'mailto:joshuaforster@icloud.com' }, // You can add icon paths and specific links
+  { name: 'LinkedIn', icon: 'linkedin-icon-path', link: 'https://www.linkedin.com/in/joshua-forster-26804421a/' },
+  { name: 'GitHub', icon: 'github-icon-path', link: 'https://github.com/joshuaforster' },
+  { name: 'CV', icon: 'cv-icon-path', link: '/CurriculumVitae.pdf' }
+
 ];
 
 export default function Hero() {
@@ -24,7 +26,7 @@ export default function Hero() {
                     {/* Mapping through the contactOptions to display each option */}
                     {contactOptions.map((option) => (
                         <div key={option.name} className="bg-white shadow-lg rounded-full p-3 inline-flex items-center justify-center">
-                            {option.name}
+                            <Link to={option.link}>{option.name}</Link> 
                         </div>
                     ))}
                 </div>
