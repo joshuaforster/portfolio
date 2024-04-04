@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 // Define the contact options as an array of objects
 const contactOptions = [
-  { name: 'Email', icon: 'email-icon-path', link: 'mailto:joshuaforster@icloud.com' }, // You can add icon paths and specific links
-  { name: 'LinkedIn', icon: 'linkedin-icon-path', link: 'https://www.linkedin.com/in/joshua-forster-26804421a/' },
-  { name: 'GitHub', icon: 'github-icon-path', link: 'https://github.com/joshuaforster' },
-  { name: 'CV', icon: 'cv-icon-path', link: '/CurriculumVitae.pdf' }
-
-];
+    { name: 'Email', icon: 'email-icon-path', link: 'mailto:joshuaforster@icloud.com' },
+    { name: 'LinkedIn', icon: 'linkedin-icon-path', link: 'https://www.linkedin.com/in/joshua-forster-26804421a/' },
+    { name: 'GitHub', icon: 'github-icon-path', link: 'https://github.com/joshuaforster' },
+    { name: 'CV', icon: 'cv-icon-path', link: '/CurriculumVitae.pdf' } // This should work
+  ];
+  
 
 export default function Hero() {
     return (
