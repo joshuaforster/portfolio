@@ -12,23 +12,21 @@ export default function BlogDetail() {
         const spaceId = 'w9xo39obj3rg';
         const environmentId = 'master';
         const accessToken = 'aufNUZnRvfQJE6MPybHWO52BrtvsxhJJcjypyFO7WkA';
-        const entryId = params.id; // Assuming 'params' is defined earlier in your component
+        const entryId = params.id;
         const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries/${entryId}?access_token=${accessToken}&include=1`;
-    
-        // Define the async function within the useEffect
+
         async function fetchBlogPosts() {
             try {
                 const res = await fetch(url);
                 const data = await res.json();
-                setPost(data); // Assuming 'setPost' updates your state with the fetched post
-    
-                // Processing to find and set the main image
+                setPost(data);
+
                 if (data.includes && data.includes.Asset) {
                     const mainImageId = data.fields.featuredImage.sys.id;
                     const mainImageAsset = data.includes.Asset.find(asset => asset.sys.id === mainImageId);
                     if (mainImageAsset) {
                         const imageUrl = `https:${mainImageAsset.fields.file.url}`;
-                        setMainImage(imageUrl); // Assuming 'setMainImage' updates your state with the main image URL
+                        setMainImage(imageUrl);
                     }
                 } else {
                     console.error('No included assets found in the response.');
@@ -37,20 +35,15 @@ export default function BlogDetail() {
                 console.error('Error fetching blog posts:', error);
             }
         }
-    
-        // Call the async function
+
         fetchBlogPosts();
-    }, [params.id]); // Assuming 'params.id' is a dependency of this effect
-    
-         
+    }, [params.id]);
 
     const Bold = ({ children }) => <span className="font-bold">{children}</span>;
-    const Text = ({ children }) => <p className="mb-4">{children}</p>;
+    const Text = ({ children }) => <p className="mb-4 text-gray-900 dark:text-gray-200">{children}</p>;
     const ListItem = ({ children }) => <li className="list-disc ml-4">{children}</li>;
 
-    // This Image component is used for images inside the rich text content
     const Image = ({ node }) => {
-        // Use the image details to build the image URL
         const { title, file } = node.data.target.fields;
         const imageUrl = `https:${file.url}`;
         return <img src={imageUrl} alt={title} className="mx-auto rounded-lg" style={{ maxWidth: '100%' }} />;
@@ -62,21 +55,18 @@ export default function BlogDetail() {
         },
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-            [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc ml-4">{children}</ul>,
+            [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc ml-4 text-gray-900 dark:text-gray-200">{children}</ul>,
             [BLOCKS.LIST_ITEM]: (node, children) => <ListItem>{children}</ListItem>,
             [BLOCKS.EMBEDDED_ASSET]: (node) => <Image node={node} />,
-            [INLINES.HYPERLINK]: (node, children) => <a href={node.data.uri} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">{children}</a>,
+            [INLINES.HYPERLINK]: (node, children) => <a href={node.data.uri} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400">{children}</a>,
         },
     };
 
-    if (!post) return <div>Loading...</div>; // Handle loading state
-
-   
-    console.log(post)
+    if (!post) return <div>Loading...</div>;
 
     return (
-        <div className='flex gap-24 mx-auto px-4 sm:px-12 lg:px-24 max-w-screen-2xl'>
-            {/* Main Content */}
+        <section  className="py-8 bg-[#F3F3F4] dark:bg-gray-900">
+             <div className='flex gap-24 mx-auto px-4 sm:px-12 lg:px-24 max-w-screen-2xl'>
             <div className='flex-grow lg:w-3/4'>
                 {mainImage && (
                     <img 
@@ -85,22 +75,21 @@ export default function BlogDetail() {
                         className="rounded-lg mb-4 w-full object-cover h-64"
                     />
                 )}
-                <h1 className="text-4xl font-bold py-4">{post.fields.title}</h1>
+                <h1 className="text-4xl font-bold py-4 text-gray-900 dark:text-white">{post.fields.title}</h1>
                 {post.fields.content && documentToReactComponents(post.fields.content, options)}
             </div>
 
-            {/* Adjusted Sidebar with new top spacing to accommodate the sticky nav */}
-            <div className='hidden lg:block lg:w-1/4 h-full sticky top-16 p-8 text-center shadow-xl bg-white'>
-                {/* Sidebar content */}
+            <div className='hidden lg:block lg:w-1/4 h-full sticky top-16 p-8 text-center shadow-xl bg-white dark:bg-gray-800'>
                 <div className="py-4">
-                    <h2 className="text-xl font-semibold mb-4">Navigation</h2>
+                    <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Navigation</h2>
                     <ul className="space-y-2">
-                        <li><Link to={`/blog/${(post.id)-1}`} className="text-blue-500 hover:text-blue-700">Previous Post</Link></li>
-                        <li><Link to={`/blog/${(post.id)+1}`} className="text-blue-500 hover:text-blue-700">Next Post</Link></li>
-                        {/* Additional sidebar links as needed */}
+                        <li><Link to={`/blog/${(post.id)-1}`} className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400">Previous Post</Link></li>
+                        <li><Link to={`/blog/${(post.id)+1}`} className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400">Next Post</Link></li>
                     </ul>
                 </div>
             </div>
         </div>
+        </section>
+       
     );
 }
