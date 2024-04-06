@@ -41,7 +41,7 @@ export default function Header() {
                     {/* Keep the original condition and image paths as you provided */}
                     {darkMode ? <img src="/logoLight.png" alt="Josh's Logo" className="h-10"/> : <img src="/joshLogo.png" alt="Josh's Logo" className="h-10"/>}
                 </Link>
-                <div className="flex">
+                <div className="flex items-center gap-8">
                     <DesktopNav />
                     <DarkButton />
                     <div onClick={toggle} className='lg:hidden'>
