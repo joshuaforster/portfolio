@@ -25,7 +25,7 @@ export default function Portfolio() {
     ));
 
     return (
-        <section className="flex justify-center items-center min-h-screen bg-white dark:bg-gray-800">
+        <section id="portfolio" className="flex justify-center items-center min-h-screen bg-white dark:bg-gray-800">
             <div className="mx-auto px-4 md:px-12 lg:px-24 py-8 max-w-screen-2xl">
                 <h1 className="text-center text-3xl lg:text-4xl font-bold mb-12 text-gray-900 dark:text-white">Projects</h1>
                 {portfolio}
