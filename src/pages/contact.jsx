@@ -21,7 +21,7 @@ export default function Contact() {
     }
 
     return (
-        <section className="flex justify-center items-center min-h-screen bg-[#F3F3F4] dark:bg-gray-800">
+        <section id='contact' className="flex justify-center items-center min-h-screen bg-[#F3F3F4] dark:bg-gray-800">
             <div className='w-full max-w-lg px-4 py-8 bg-white dark:bg-gray-900 shadow-2xl rounded-lg sm:px-6 lg:px-8'>
                 <div className="text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Contact</h2>

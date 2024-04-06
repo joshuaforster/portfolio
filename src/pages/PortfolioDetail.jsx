@@ -10,11 +10,8 @@ export default function PortfolioDetail() {
     const projectID = Number(params.id);
     const foundProject = projects.find((project) => project.id === projectID);
     setProject(foundProject);
-    console.log(params)
   }, [params]);
 
-
-  // Handling the case when the project is not found
   if (!project) {
     return <p>Loading...</p>;
   }
@@ -23,13 +20,13 @@ export default function PortfolioDetail() {
     <React.Fragment key={index}>
       {line} {index < arr.length - 1? <br /> : ''}
     </React.Fragment>
-  ))
+  ));
 
   return (
-    <div className="flex justify-center text-center pt-8 pb-16 bg-gray-100 min-h-screen">
+    <div className="flex justify-center text-center pt-8 pb-16 bg-gray-100 dark:bg-gray-800 min-h-screen">
       <div className='w-full max-w-4xl mx-auto px-4 sm:px-12 lg:px-24'>
-        <h1 className="text-4xl font-bold text-center my-8">{project.title}</h1>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">{productDescription}</p>
+        <h1 className="text-4xl font-bold text-center my-8 text-gray-900 dark:text-white">{project.title}</h1>
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">{productDescription}</p>
         <div className="flex justify-center my-4">
           <img 
             src={project.image} 
@@ -39,7 +36,7 @@ export default function PortfolioDetail() {
         </div>
         <Link
           to={project.url}
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-150 ease-in-out"
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-150 ease-in-out"
         >
           Live Link
         </Link>
