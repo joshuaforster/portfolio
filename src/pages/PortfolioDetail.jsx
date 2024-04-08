@@ -45,6 +45,7 @@ return (
           className="max-w-full h-auto rounded-lg shadow-lg" 
         />
       </div>
+      <h2 className="dark:text-white pb-4">Project Overview:</h2>
       <p className="text-lg text-gray-700 dark:text-white leading-relaxed mb-8">{productDescription}</p>
       <h2 className="dark:text-white">Technologies</h2>
       {technologies}
