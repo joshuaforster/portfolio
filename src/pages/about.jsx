@@ -14,8 +14,8 @@ const technologies = [
 
 export default function About() {
   return (
-    <section className="flex justify-center items-center min-h-screen dark:bg-gray-900">
-      <div className="font-sans text-gray-800 dark:text-white flex flex-col md:flex-row px-4 md:px-12 lg:px-24 lg:gap-8 py-8 max-w-screen-2xl m-auto">
+    <section className="flex justify-center items-center  dark:bg-gray-900">
+      <div className="font-sans text-gray-800 dark:text-white flex flex-col md:flex-row px-4 md:px-12 lg:px-24 lg:gap-8  py-8 max-w-screen-2xl m-auto">
           <div className="w-full lg:w-1/2 ">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">About Me</h2>
