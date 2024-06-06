@@ -4,7 +4,7 @@ const contactOptions = [
     { name: 'Email', link: 'mailto:joshuaforster@icloud.com' },
     { name: 'LinkedIn', link: 'https://www.linkedin.com/in/joshua-forster-26804421a/' },
     { name: 'GitHub', link: 'https://github.com/joshuaforster' },
-    { name: 'CV', link: '/curriculumVitae.pdf' }
+
 ];
 
 export default function Hero() {
