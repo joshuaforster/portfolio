@@ -11,17 +11,7 @@ export const projects = [
     tech:['Tailwind', 'React', 'GitHub','Netlify','Mui']
   }
   ,
-  {
-    id: 2,
-    url: 'https://norfolkhealthandfitness.netlify.app/',
-    name: 'Norfolk Health & Fitness',
-    image: '/norfolkhealth.png',
-    title: 'Norfolk Health & Fitness',
-    description: "Norfolk Health & Fitness, the premier fitness training provider in East Anglia, holds a special place in my heart. They were instrumental in my journey to becoming a qualified personal trainer, achieving a Level 3 teaching qualification, and embarking on a career as a frontend developer. The company aimed to transition from their existing WordPress site to a custom-coded solution to escape the limitations and vulnerabilities of the WordPress ecosystem, such as code bloat, spam messages, constant worry about updates, and susceptibility to pharma hacks.\n\nEntrusted with this project, I opted for a straightforward approach using vanilla JavaScript and CSS for the site's construction. In hindsight, incorporating a framework like Tailwind would have streamlined the development process, but at the time, I was unfamiliar with it. Key improvements to the site include a significant reduction in code complexity, enhanced color schemes for improved accessibility, and the integration of Stripe for secure course payments.\n\nUnderstanding the site owner's lack of programming knowledge and concern for easily making updates and managing blog content—capabilities easily handled in WordPress—I implemented a headless CMS. This solution empowers the owner to edit and add content, including blog posts, terms and conditions, Q&A, privacy policies, and about pages, without the risk of disrupting the site's functionality. The headless CMS strikes the perfect balance, offering a secure and editable website.\n\nCurrently, we are applying the final touches to the website's styling and preparing to redirect the domain, transitioning from its temporary hosting on Netlify to its official address at www.norfolkhealthandfitness.com.",
-    buttonText: 'See Project',
-    shortDescription: `A website rebuild for the largest fitness training provider in East Anglia`,
-    tech:['Vanilla CSS', 'Vanilla Javascript', 'GitHub', 'Netlify', 'Contentful']
-  },
+
   {
     id: 3,
     url: 'https://foodcruitment.netlify.app/',

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
+
 export default function BlogDetail() {
     const [post, setPost] = useState(null);
     const [mainImage, setMainImage] = useState(null);
