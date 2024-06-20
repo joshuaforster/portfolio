@@ -20,7 +20,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">About Me</h2>
               <p className="mb-6  dark:text-white">
-                I am a Front-End Developer with a unique background. Starting my career with a BSc in Nutrition, I ventured into the world of health and fitness, which led to my role at Norfolk Health and Fitness. Here, my fascination with web development and design was rekindled, guiding me towards an MA in Communication Design.
+                I am a Front-End Developer with a unique background. Starting my career with a BSc in Nutrition. Here, my fascination with web development and design was rekindled, guiding me towards an MA in Communication Design.
               </p>
               <p className="mb-6  dark:text-white">
                 Armed with skills in HTML, CSS, JavaScript, React, Typescript, and Tailwind, I craft accessible, functional, and visually appealing web applications. My journey from nutrition to technology reflects my ability to adapt and thrive in diverse environments, making me a versatile asset to any team.
